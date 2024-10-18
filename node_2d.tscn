@@ -1,0 +1,131 @@
+[gd_scene load_steps=27 format=3 uid="uid://decprvcqoccmm"]
+
+[ext_resource type="Texture2D" uid="uid://ddcq2mb8aktlx" path="res://board.png" id="1_c2738"]
+[ext_resource type="Texture2D" uid="uid://dpfnwhstjoc7f" path="res://Screenshot 2024-10-19 002105.png" id="2_v1e8h"]
+[ext_resource type="Texture2D" uid="uid://dbtsecrmm0nuv" path="res://chess/pieces/archers.png" id="2_y4j5h"]
+[ext_resource type="Texture2D" uid="uid://d23dmsxxnvrs0" path="res://arena10.png" id="3_iohnc"]
+[ext_resource type="Script" path="res://tile_map.gd" id="3_meb3g"]
+[ext_resource type="Texture2D" uid="uid://drvmpu3j7sknn" path="res://chess/pieces/baby-dragon.png" id="3_w2ash"]
+[ext_resource type="Texture2D" uid="uid://bgmty3peuh8xi" path="res://chess/112BpQGu8GL._AC_SY350_QL15_.jpg" id="4_ombjo"]
+[ext_resource type="Texture2D" uid="uid://cw3equwkaukki" path="res://chess/pieces/barbarians.png" id="4_r0nmv"]
+[ext_resource type="Texture2D" uid="uid://d81gstp5iadq" path="res://chess/pieces/bowler.png" id="5_cmpxj"]
+[ext_resource type="Texture2D" uid="uid://c52bmker10t6r" path="res://pexels-francesco-ungaro-281260.jpg" id="5_qhqg4"]
+[ext_resource type="Texture2D" uid="uid://c1fh4tcsv8qr1" path="res://chess/pieces/hog-rider.png" id="6_ugqlg"]
+[ext_resource type="Texture2D" uid="uid://dbm4buhcbuao1" path="res://chess/pieces/minions.png" id="7_2dpdh"]
+[ext_resource type="Texture2D" uid="uid://qf83ua41et6w" path="res://chess/pieces/warden.png" id="8_hijw6"]
+[ext_resource type="Texture2D" uid="uid://dgah3wkb2gvoe" path="res://chess/pieces/wizard.png" id="10_pdvvv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jn0wa"]
+texture = ExtResource("1_c2738")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m02qp"]
+texture = ExtResource("1_c2738")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0kfk"]
+texture = ExtResource("2_y4j5h")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qejq1"]
+texture = ExtResource("3_w2ash")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obgyb"]
+texture = ExtResource("4_r0nmv")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n40my"]
+texture = ExtResource("5_cmpxj")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6tywk"]
+texture = ExtResource("6_ugqlg")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_asy6w"]
+texture = ExtResource("7_2dpdh")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xi0x"]
+texture = ExtResource("8_hijw6")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6t4o"]
+texture = ExtResource("2_v1e8h")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_saefn"]
+texture = ExtResource("10_pdvvv")
+texture_region_size = Vector2i(295, 350)
+use_texture_padding = false
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_otbhm"]
+sources/0 = SubResource("TileSetAtlasSource_jn0wa")
+sources/1 = SubResource("TileSetAtlasSource_m02qp")
+sources/2 = SubResource("TileSetAtlasSource_p6t4o")
+sources/13 = SubResource("TileSetAtlasSource_h0kfk")
+sources/14 = SubResource("TileSetAtlasSource_qejq1")
+sources/15 = SubResource("TileSetAtlasSource_obgyb")
+sources/16 = SubResource("TileSetAtlasSource_n40my")
+sources/17 = SubResource("TileSetAtlasSource_6tywk")
+sources/18 = SubResource("TileSetAtlasSource_asy6w")
+sources/19 = SubResource("TileSetAtlasSource_1xi0x")
+sources/20 = SubResource("TileSetAtlasSource_saefn")
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(194, 251)
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = 1
+tile_set = SubResource("TileSet_otbhm")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 131072, 0, 0, 65537, 0, 0, 131071, 0, 0, 65534, 0, 0, 196606, 0, 0, 131069, 0, 0, -3, 0, 0, -1, 0, 0, -65535, 0, 0, 2, 0, 0, 131074, 0, 0, -65538, 0, 0, -131072, 0, 0, -131070, 0, 0, -65533, 0, 0, 65539, 0, 0, 196604, 0, 0, 65532, 0, 0, -65540, 0, 0, 262141, 0, 0, 327676, 0, 0, 393213, 0, 0, 327678, 0, 0, 393215, 0, 0, 262144, 0, 0, 262143, 0, 0, 196609, 0, 0, 196611, 0, 0, 262146, 0, 0, 327681, 0, 0, 327683, 0, 0, -196612, 0, 0, -327684, 0, 0, -327682, 0, 0, -393216, 0, 0, -393214, 0, 0, -327677, 0, 0, -196605, 0, 0, -196607, 0, 0, -327679, 0, 0, -262142, 0, 0, -262144, 0, 0, -196610, 0, 0, -262147, 0, 0, -262145, 0, 0, -131073, 0, 0, -131075, 0, 0, 196607, 2, 0, 131073, 2, 0, 196608, 2, 0, 65536, 2, 0, 65538, 2, 0, 131075, 2, 0, 1, 2, 0, 65535, 2, 0, -65536, 2, 0, -2, 2, 0, -65539, 2, 0, -65537, 2, 0, -131074, 2, 0, -131076, 2, 0, -196611, 2, 0, -262148, 2, 0, -327683, 2, 0, -327681, 2, 0, -262146, 2, 0, -327680, 2, 0, -393215, 2, 0, -327678, 2, 0, -393213, 2, 0, -262141, 2, 0, -262143, 2, 0, -196609, 2, 0, -196608, 2, 0, -196606, 2, 0, -131071, 2, 0, -65534, 2, 0, -131069, 2, 0, 3, 2, 0, 65533, 2, 0, -4, 2, 0, 131068, 2, 0, 131070, 2, 0, 196605, 2, 0, 262140, 2, 0, 327677, 2, 0, 262142, 2, 0, 327679, 2, 0, 393214, 2, 0, 393212, 2, 0, 327680, 2, 0, 262145, 2, 0, 327682, 2, 0, 196610, 2, 0, 262147, 2, 0)
+script = ExtResource("3_meb3g")
+
+[node name="Sprite2D" type="Sprite2D" parent="TileMap"]
+position = Vector2(24, 9)
+scale = Vector2(0.246767, 0.216102)
+texture = ExtResource("2_v1e8h")
+
+[node name="Arena10" type="Sprite2D" parent="TileMap"]
+z_index = -2
+position = Vector2(-1.23827, -53)
+scale = Vector2(0.782181, 0.794922)
+texture = ExtResource("3_iohnc")
+
+[node name="blk" type="Sprite2D" parent="TileMap/Arena10"]
+
+[node name="112BpQGu8gl_AcSy350Ql15" type="Sprite2D" parent="TileMap/Arena10"]
+z_index = 1
+position = Vector2(1.42144, 66.6732)
+scale = Vector2(0.791801, 0.76941)
+texture = ExtResource("4_ombjo")
+
+[node name="turn" type="Sprite2D" parent="TileMap"]
+
+[node name="pieces" type="Sprite2D" parent="TileMap"]
+position = Vector2(274.25, -126.375)
+scale = Vector2(0.018212, 0.0185951)
+texture = ExtResource("10_pdvvv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="blue hai pani" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(1, -48)
+scale = Vector2(0.0818368, 0.128806)
+texture = ExtResource("5_qhqg4")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://decprvcqoccmm"]
+[gd_scene load_steps=29 format=3 uid="uid://decprvcqoccmm"]
 
 [ext_resource type="Texture2D" uid="uid://ddcq2mb8aktlx" path="res://board.png" id="1_c2738"]
 [ext_resource type="Texture2D" uid="uid://dpfnwhstjoc7f" path="res://Screenshot 2024-10-19 002105.png" id="2_v1e8h"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dbm4buhcbuao1" path="res://chess/pieces/minions.png" id="7_2dpdh"]
 [ext_resource type="Texture2D" uid="uid://qf83ua41et6w" path="res://chess/pieces/warden.png" id="8_hijw6"]
 [ext_resource type="Texture2D" uid="uid://dgah3wkb2gvoe" path="res://chess/pieces/wizard.png" id="10_pdvvv"]
+[ext_resource type="Texture2D" uid="uid://bu1gd15edv62c" path="res://chess/pieces/healer.png" id="15_8ewih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jn0wa"]
 texture = ExtResource("1_c2738")
@@ -86,6 +87,8 @@ sources/18 = SubResource("TileSetAtlasSource_asy6w")
 sources/19 = SubResource("TileSetAtlasSource_1xi0x")
 sources/20 = SubResource("TileSetAtlasSource_saefn")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ewscn"]
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(194, 251)
 
@@ -117,11 +120,6 @@ texture = ExtResource("4_ombjo")
 
 [node name="turn" type="Sprite2D" parent="TileMap"]
 
-[node name="pieces" type="Sprite2D" parent="TileMap"]
-position = Vector2(274.25, -126.375)
-scale = Vector2(0.018212, 0.0185951)
-texture = ExtResource("10_pdvvv")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="blue hai pani" type="Sprite2D" parent="."]
@@ -129,3 +127,212 @@ z_index = -2
 position = Vector2(1, -48)
 scale = Vector2(0.0818368, 0.128806)
 texture = ExtResource("5_qhqg4")
+
+[node name="Wizard" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(56, 88)
+scale = Vector2(0.0384934, 0.0364583)
+texture = ExtResource("10_pdvvv")
+
+[node name="Wizard2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-56, 88)
+scale = Vector2(0.038, 0.038)
+texture = ExtResource("10_pdvvv")
+
+[node name="Barbarians" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-56, 72)
+scale = Vector2(0.0748333, 0.07)
+texture = ExtResource("4_r0nmv")
+
+[node name="Barbarians2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(56.375, 72)
+scale = Vector2(0.075, 0.07)
+texture = ExtResource("4_r0nmv")
+
+[node name="Archers" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-40, 72)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_y4j5h")
+
+[node name="Archers2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(40, 72)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_y4j5h")
+
+[node name="Hog-rider" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-40, 88)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("6_ugqlg")
+
+[node name="Hog-rider2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(40, 88)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("6_ugqlg")
+
+[node name="Warden" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-8, 88)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("8_hijw6")
+
+[node name="Baby-dragon" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-24, 88)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_w2ash")
+
+[node name="Baby-dragon2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(24, 88)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_w2ash")
+
+[node name="Minions" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(24, 72)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("7_2dpdh")
+
+[node name="Minions2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-24, 72)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("7_2dpdh")
+
+[node name="Bowler" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-8, 72)
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("5_cmpxj")
+
+[node name="Bowler2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(8, 72)
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("5_cmpxj")
+
+[node name="Healer" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(8, 88)
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("15_8ewih")
+
+[node name="dark healer" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.55, 0.55, 1)
+z_index = 1
+material = SubResource("ShaderMaterial_ewscn")
+position = Vector2(8, -88)
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("15_8ewih")
+
+[node name="dark bowler1" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.55, 0.55, 1)
+z_index = 1
+position = Vector2(8, -72)
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("5_cmpxj")
+
+[node name="dark bowler2" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.55, 0.55, 1)
+z_index = 1
+position = Vector2(-8, -72)
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("5_cmpxj")
+
+[node name="dark barb1" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.55, 0.55, 1)
+z_index = 1
+position = Vector2(-56, -72)
+scale = Vector2(0.0748333, 0.07)
+texture = ExtResource("4_r0nmv")
+
+[node name="dark barb2" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.55, 0.55, 1)
+z_index = 1
+position = Vector2(56, -72)
+scale = Vector2(0.0748333, 0.07)
+texture = ExtResource("4_r0nmv")
+
+[node name="dark Archers1" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.55, 0.55, 1)
+z_index = 1
+position = Vector2(-40, -72)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_y4j5h")
+
+[node name="dark Archers2" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.55, 0.55, 1)
+z_index = 1
+position = Vector2(40, -72)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_y4j5h")
+
+[node name="dark Minions1" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.55, 0.55, 1)
+z_index = 1
+position = Vector2(-24, -72)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("7_2dpdh")
+
+[node name="dark Minions2" type="Sprite2D" parent="."]
+modulate = Color(0.55, 0.55, 0.55, 1)
+z_index = 1
+position = Vector2(24, -72)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("7_2dpdh")
+
+[node name="dark Wizard1" type="Sprite2D" parent="."]
+modulate = Color(0.5, 0.5, 0.5, 1)
+z_index = 1
+position = Vector2(-56, -88)
+scale = Vector2(0.038, 0.038)
+texture = ExtResource("10_pdvvv")
+
+[node name="dark Wizard2" type="Sprite2D" parent="."]
+modulate = Color(0.5, 0.5, 0.5, 1)
+z_index = 1
+position = Vector2(56, -88)
+scale = Vector2(0.038, 0.038)
+texture = ExtResource("10_pdvvv")
+
+[node name="dark Hog-rider1" type="Sprite2D" parent="."]
+modulate = Color(0.5, 0.5, 0.5, 1)
+z_index = 1
+position = Vector2(-40, -88)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("6_ugqlg")
+
+[node name="dark Hog-rider2" type="Sprite2D" parent="."]
+modulate = Color(0.5, 0.5, 0.5, 1)
+z_index = 1
+position = Vector2(40, -88)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("6_ugqlg")
+
+[node name="dark Baby-dragon1" type="Sprite2D" parent="."]
+modulate = Color(0.5, 0.5, 0.5, 1)
+z_index = 1
+position = Vector2(-24, -88)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_w2ash")
+
+[node name="dark Baby-dragon2" type="Sprite2D" parent="."]
+modulate = Color(0.5, 0.5, 0.5, 1)
+z_index = 1
+position = Vector2(24, -88)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_w2ash")
+
+[node name="dark Warden" type="Sprite2D" parent="."]
+self_modulate = Color(0.5, 0.5, 0.5, 1)
+z_index = 1
+position = Vector2(-8, -88)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("8_hijw6")
